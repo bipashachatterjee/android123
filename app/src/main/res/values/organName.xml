@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">jibandeep</string>
     <string-array name="organName">
         <item>Select The Organ To Be Donated</item>
         <item>Eye</item>

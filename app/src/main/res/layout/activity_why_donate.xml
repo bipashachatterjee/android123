@@ -8,17 +8,6 @@
     tools:context=".WhyDonate"
     android:weightSum="4">
 
-  <TextView
-      android:id="@+id/textView4"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:fontFamily="@fo"
-      android:text="WHY WE DONATE"
-      android:textSize="30dp"
-      android:textStyle="bold"
-      android:gravity="center"
-      android:layout_weight=""/>
-
   <ScrollView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
@@ -27,7 +16,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" />
+        android:orientation="vertical" >
+      <TextView
+          android:id="@+id/textView4"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:fontFamily="@fo"
+          android:text="WHY WE DONATE"
+          android:textSize="30dp"
+          android:textStyle="bold"
+          android:gravity="center"
+          android:layout_weight=""/>
+    </LinearLayout>
   </ScrollView>
 
   <LinearLayout
