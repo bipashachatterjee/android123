@@ -8,6 +8,98 @@
     tools:context=".WhyDonate"
     android:weightSum="4">
 
+  <TextView
+      android:id="@+id/textView4"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:fontFamily="@fo"
+      android:text="WHY WE DONATE"
+      android:textSize="30dp"
+      android:textStyle="bold"
+      android:gravity="center"
+      android:layout_weight=""/>
+  <!--
+  WHY SHOULD I DONATE BLOOD?
+
+Donating blood regularly has proved beneficial not only for the recipient but also the donor. It is helpful for the vital organs, and it reduces risk for chronic diseases such as cancer and stroke.
+
+For certain treatments like chemotherapy, blood is required on a daily basis, whereas victims of accident may require up to 100 units of blood transfusion. In India, blood shortage is more than 2 million pint and counting.
+
+Here are 8 reasons why you should donate blood :
+
+1. Reduce risk of heart attacks and liver ailment :
+
+Donating blood regularly is beneficial to prevent and reduce heart attacks and liver ailment. The risk of heart and liver related problem is caused by the iron overload in the body. Donating blood helps in maintaining the iron level in the body and thus reduce those risk.
+
+2. Lower the risk of cancer :
+
+Cancer is the most feared and deadly disease. Blood donation helps in lowering the risk of cancer. By donating blood regularly the iron level in the blood is balanced and the risk of cancer-related to the liver, lungs, and intestine gets lower.
+
+3. New blood cells :
+
+Once we donate blood, the body tries to restore the blood loss. This helps in the production of the new blood cells and maintain good health.
+
+4. Reduced risk of hemochromatosis :
+
+Hemochromatosis is a disease that occurs due to increase in the absorption of iron by the body. Blood donation helps in reducing iron overload in the body and prevent Hemochromatosis.
+
+5. Maintain Weight :
+
+It is recommended to donate blood for those who are overweight. Regularly donating blood helps in weight loss and burn fat up to 650 calories.
+
+6. Helps prevent premature ageing :
+
+While donating blood, you not only lose weight but it also helps in reducing stress. Stress is one of the reasons that triggers premature ageing. Blood donation helps in reducing stress on your mind and body. Also, keeps the skin tight and wrinkle-free.
+
+ 7. Speeds up healing process :
+
+The body tries to adjust to the loss of red blood the cells we donate blood, these adjustments also help in accelerating the wound healing process.
+
+8. Lower cholesterol level :
+
+Blood contains iron, if the iron in blood is overloaded it can increase the chances of blockage in blood vessels. Blood donation can help to reduce the amount of iron in the blood thus helps in lower cholesterol.
+
+WHY SHOULD I DONATE ORGAN?
+
+The need for organ donors has been rising significantly over the years. This growing need is due to the fact that the number of people with end-stage organ failure has been increasing and, with advances in transplantation, a greater proportion of these people are eligible for organ transplantation.
+One of the biggest obstacles to organ transplantation is getting individuals to register to become organ donors before they are faced with a tragic situation. Consider these reasons why you should be an organ donor.
+
+Here are 8 reasons why you should donate organ :
+
+1. Organ donation is an opportunity to help others :
+
+ People who are on an organ waiting list typically have end-stage organ disease that significantly impacts their quality of life and may be near the end of their life. Receiving an organ can become a life-changing event for these people. It can also help a family work through the grieving process and deal with their loss by knowing their loved one is helping save the lives of others.
+
+2. One organ donor can help multiple people :
+
+One organ donor has the potential to save eight lives, save or improve as many as 60 lives and enhance the eyesight of two.
+
+3. Living donors fill a crucial need :
+
+ A living donor can donate a kidney or a portion of their liver to a friend or family member or even altruistically and continue to live a normal life with very little restrictions. People waiting for a kidney transplant make up more than 80 percent of people on the organ waiting list and people waiting for a liver transplant makeup approximately 12 percent.
+
+4. Nebraska needs more organ donors :
+
+ In Nebraska alone, there are approximately 500 people waiting for an organ to become available. But only about 48 percent of the population of Nebraska has registered to become a donor.
+
+5. People are dying while waiting for an organ :
+
+ Approximately 20 people die each day while they are waiting for an organ match to undergo a transplant.
+
+6. Organ donation can be a rewarding and positive experience :
+
+It can help a family work through the grieving process and deal with their loss by knowing their loved one is helping save the lives of others.
+
+7. There are no age exclusions to donate :
+
+If you are otherwise healthy, many of your organs could still be viable for an organ donation. The transplant surgeon evaluates the organs and decides whether they are suitable on a case-by-case basis.
+
+8. Very few medical conditions disqualify you from donating your organs :
+
+ It may be determined that certain organs are not suitable for transplantation, but other tissues and organs may be fine. Simply put, a disease in one organ does not preclude other organs from being donated.
+
+                           Thank you.
+-->
   <ScrollView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
@@ -16,18 +108,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
-      <TextView
-          android:id="@+id/textView4"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:fontFamily="@fo"
-          android:text="WHY WE DONATE"
-          android:textSize="30dp"
-          android:textStyle="bold"
-          android:gravity="center"
-          android:layout_weight=""/>
-    </LinearLayout>
+        android:orientation="vertical" />
   </ScrollView>
 
   <LinearLayout
