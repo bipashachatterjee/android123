@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "898372663967",
+    "project_id": "jibandeep-73a5e",
+    "storage_bucket": "jibandeep-73a5e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898372663967:android:2ce33c09b3a69dbc3980aa",
+        "android_client_info": {
+          "package_name": "com.example.jibandeep"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "898372663967-i277krv971k3bk1dqjiq915vo8puhsjr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF58wiNpRQFRjpFAHxqu7ed1ansPSBjZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "898372663967-i277krv971k3bk1dqjiq915vo8puhsjr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

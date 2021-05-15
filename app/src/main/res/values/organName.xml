@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">jibandeep</string>
+    <string-array name="organName">
+        <item>Select The Organ To Be Donated</item>
+        <item>Eye</item>
+        <item>Heart</item>
+        <item>Liver</item>
+        <item>Skin Tissue</item>
+        <item>Kidney</item>
+        <item>Lungs</item>
+        <item>Pancreas</item>
+        <item>Intestine</item>
+        <item>Bone Tissue</item>
+        <item>Tendons</item>
+        <item>Ligaments</item>
+    </string-array>
+</resources>

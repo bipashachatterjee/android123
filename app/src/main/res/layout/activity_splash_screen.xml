@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="-1dp"
+        android:background="@drawable/gradien_background"
+        android:orientation="vertical"
+        android:padding="20dp">
+        .....
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_marginTop="230dp"
+            android:layout_marginLeft="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/splashicon" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+
+        android:layout_marginTop="600dp"
+        android:autoSizeTextType="uniform"
+        android:maxLines="1"
+        android:text="--You Can Find Your Smile Here--"
+        android:textColor="#2A7C2D"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+
+</RelativeLayout>

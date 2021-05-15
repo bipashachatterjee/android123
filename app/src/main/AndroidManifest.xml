@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jibandeep">
+
+    <uses-permission android:name="LOCATION_HARDWARE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/appname"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Jibandeep">
+        <activity android:name=".Example"></activity>
+        <activity android:name=".organAdd" ></activity>
+        <activity android:name=".organSearch" />
+        <activity android:name=".organSearchView" />
+        <activity android:name=".bloodSearchView" />
+        <activity android:name=".bloodSearch" />
+        <activity android:name=".BloodAdd" />
+        <activity android:name=".centralHome" />
+        <activity android:name=".organHome" />
+        <activity android:name=".bloodHome" />
+        <activity android:name=".mainmenu" />
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
