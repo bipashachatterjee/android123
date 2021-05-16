@@ -17,18 +17,13 @@ public class SplashScreen extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         tv= findViewById(R.id.textView);
-        TextView secondTextView = new TextView(this);
-        Shader textShader=new LinearGradient(0, 0, 0, 20,
-                new int[]{Color.GREEN, Color.BLUE},
-                new float[]{0, 1}, Shader.TileMode.CLAMP);
-        secondTextView.getPaint().setShader(textShader);
         setContentView(R.layout.activity_splash_screen);
         Handler h = new Handler();
 
         h.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(SplashScreen.this,mainmenu.class);
+                Intent i = new Intent(SplashScreen.this,MainActivity.class);
                 startActivity(i);
                 finish();
             }

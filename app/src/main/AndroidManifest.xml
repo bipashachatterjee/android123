@@ -11,9 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Jibandeep">
-        <activity android:name=".Example"></activity>
+
         <activity android:name=".organAdd" ></activity>
         <activity android:name=".organSearch" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".WhyDonate" />
+        <activity android:name=".RegistrationActivity" />
         <activity android:name=".organSearchView" />
         <activity android:name=".bloodSearchView" />
         <activity android:name=".bloodSearch" />

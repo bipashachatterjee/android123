@@ -42,6 +42,7 @@ Button b,o,c,w;
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(mainmenu.this, WhyDonate.class);
+                startActivity(i);
             }
         });
     }

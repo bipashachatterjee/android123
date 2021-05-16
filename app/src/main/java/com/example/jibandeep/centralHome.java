@@ -32,7 +32,7 @@ public class centralHome extends AppCompatActivity {
         organ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=organ+donation+center");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=organ+donation+center+near+me");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);

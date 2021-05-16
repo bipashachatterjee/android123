@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -20,7 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     EditText email,password;
-Button b,r;
+FloatingActionButton reg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,7 @@ Button b,r;
         mAuth = FirebaseAuth.getInstance();
         email =findViewById(R.id.email);
         password=findViewById(R.id.pass);
+        reg=findViewById(R.id.register);
     }
     public void login(View v){
       String e=email.getText().toString();
@@ -80,10 +82,15 @@ Button b,r;
                         }
                     }
                 });
+        reg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(MainActivity.this,RegistrationActivity.class);
+                startActivity(i);
+                finish();
+
+            }
+        });
     }
-    public void register_page(View v){
-        Intent i=new Intent(MainActivity.this,RegistrationActivity.class);
-        startActivity(i);
-        finish();
-    }
+
 }
