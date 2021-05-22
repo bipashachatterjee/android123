@@ -82,20 +82,8 @@ public class BloodSearch extends AppCompatActivity {
                 call.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if (hasPermissions()) {
-                            Intent callIntent = new Intent(Intent.ACTION_CALL);
-                            callIntent.setData(Uri.parse("tel:"+ph));
-
-                            if (ActivityCompat.checkSelfPermission(getBaseContext(),
-                                    Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-
-                                return;
-                            }
+                            Intent callIntent = new Intent(Intent.ACTION_DIAL,Uri.parse("tel:"+ph));
                             startActivity(callIntent);
-                        } else {
-                            //Since our app doesn't have permission, we have to request one.
-                            requestPerms();
-                        }
                     }
                 });
 
