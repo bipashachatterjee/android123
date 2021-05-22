@@ -11,6 +11,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -119,9 +120,10 @@ public class BloodSearch extends AppCompatActivity {
 
                 }
                 String value = dataSnapshot.getValue(String.class);
+                Log.e("Blood data",value);
                 String[] val = value.split(",");
 
-                if (val[2].equals(pancht)) {
+                if (true) {
                     flag=0;
                     mylist.add(val[0]);
                     mylist.add(val[1]);

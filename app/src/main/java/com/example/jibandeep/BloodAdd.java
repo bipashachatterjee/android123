@@ -1,5 +1,7 @@
 package com.example.jibandeep;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,6 +14,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.IgnoreExtraProperties;
@@ -46,7 +49,7 @@ public class BloodAdd extends AppCompatActivity {
                 String address1 = address.getText().toString();
                 String hospital1 = hospital.getText().toString();
                 String combo = name1 + "," + mobile1 + "," + blood1 + "," + address1+","+hospital1;
-
+                Toast.makeText(BloodAdd.this, combo, Toast.LENGTH_SHORT).show();
                 if (name1.length() == 0) {
                     name.setError("Please Enter Your Name");
                     name.requestFocus();
@@ -80,7 +83,16 @@ public class BloodAdd extends AppCompatActivity {
                             this.mobile1=mobile;
                         }
                     }
-                   mFirebaseDatabase.child("users").child(blood1).child(mobile1).setValue(combo);
+                   mFirebaseDatabase.child("users").child(blood1).child(mobile1).setValue(combo, new DatabaseReference.CompletionListener() {
+                       @Override
+                       public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                           if (error != null) {
+                               System.out.println("Data could not be saved " + error.getMessage());
+                           } else {
+                               System.out.println("Data saved successfully.");
+                           }
+                       }
+                   });
 
                     Toast.makeText(BloodAdd.this,"Donor Added",Toast.LENGTH_SHORT).show();
                     Intent i=new Intent(BloodAdd.this, Mainmenu.class);

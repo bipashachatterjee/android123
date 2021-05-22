@@ -16,15 +16,15 @@ public class BloodSearchView extends AppCompatActivity {
         setContentView(R.layout.activity_blood_search_view);
         srch=(Button) findViewById(R.id.button3);
         final Spinner blood=(Spinner) findViewById(R.id.spinner3);
-        final Spinner pan=(Spinner) findViewById(R.id.spinner4);
+        //final Spinner pan=(Spinner) findViewById(R.id.spinner4);
         srch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String btype=blood.getSelectedItem().toString();
-                String panc=pan.getSelectedItem().toString();
+                //String panc=pan.getSelectedItem().toString();
                 Intent re=new Intent(BloodSearchView.this, BloodSearch.class);
                 re.putExtra("bt",btype);
-                re.putExtra("pa",panc);
+                //re.putExtra("bt",panc);
                 startActivity(re);
 
             }
