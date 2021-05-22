@@ -11,7 +11,7 @@ import android.widget.ImageView;
 
 import org.w3c.dom.Text;
 
-public class centralHome extends AppCompatActivity {
+public class CentralHome extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

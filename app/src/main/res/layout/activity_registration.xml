@@ -6,15 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".RegistrationActivity"
-    android:background="@drawable/splashproject"><z></z>
-
-    <TextView
-        android:id="@+id/back"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="back"
-        android:textSize="25dp"
-        android:gravity="right"/>
+    android:background="@drawable/splashproject">
 
     <com.google.android.material.textfield.TextInputLayout
     android:layout_width="match_parent"
@@ -55,18 +47,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="PHONE"
+        android:hint="AGE"
         android:layout_margin="15dp"
         app:errorEnabled="true"
         app:startIconDrawable="@drawable/ic_call"
         app:counterEnabled="true"
-        app:counterMaxLength="10">
+        app:counterMaxLength="3">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/phone"
+            android:id="@+id/age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="phone"
+            android:inputType="number"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -96,7 +88,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="REGISTER"
+        android:textSize="20dp"
         android:layout_margin="15dp"
         android:layout_gravity="end"/>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_margin="15dp"
+        android:textSize="20dp"/>
+
 
 </LinearLayout>

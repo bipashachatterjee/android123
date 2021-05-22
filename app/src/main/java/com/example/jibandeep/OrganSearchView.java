@@ -28,23 +28,26 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-public class bloodSearch extends AppCompatActivity {
+public class OrganSearchView extends AppCompatActivity {
 
     private ArrayList<String> result=new ArrayList<>();
     private ArrayList<String> mylist=new ArrayList<>();
     public int flag=1;
     public String phone2;
     private ListView resultview;
+    String bloodgroup, pancht,item ;
+    FirebaseDatabase database;
+    DatabaseReference mRef;
     private static final int PERMS_REQUEST_CODE = 123;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blood_search);
-        final String bloodgroup=getIntent().getStringExtra("bt");
-        final String pancht=getIntent().getStringExtra("pa");
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        setContentView(R.layout.activity_organ_search_view);
+         bloodgroup=getIntent().getStringExtra("bt");
+         pancht=getIntent().getStringExtra("pa");
+         database = FirebaseDatabase.getInstance();
 
-        DatabaseReference mRef = database.getReference("users/"+bloodgroup);
+        mRef = database.getReference("users/"+bloodgroup);
         resultview = (ListView) findViewById(R.id.listview);
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, result);
         resultview.setAdapter(arrayAdapter);
@@ -56,10 +59,10 @@ public class bloodSearch extends AppCompatActivity {
                 String pan = mylist.get((pos * 3) + 2);
                 final String ph = mylist.get((pos * 3) + 1);
                 phone2=ph;
-                String item = Integer.toString(pos);
+                item = Integer.toString(pos);
 
-                Toast.makeText(bloodSearch.this, "Phone : " + phone2 + " Locality: " + pan, Toast.LENGTH_SHORT).show();
-                final Dialog dialog = new Dialog(bloodSearch.this);
+                Toast.makeText(OrganSearchView.this, "Phone : " + phone2 + " Locality: " + pan, Toast.LENGTH_SHORT).show();
+                final Dialog dialog = new Dialog(OrganSearchView.this);
 
 
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -114,7 +117,7 @@ public class bloodSearch extends AppCompatActivity {
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 if(dataSnapshot.getValue()==null)
                 {
-                    Toast.makeText(bloodSearch.this,"No users found", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OrganSearchView.this,"No users found", Toast.LENGTH_SHORT).show();
                     finish();
 
                 }
@@ -152,8 +155,7 @@ public class bloodSearch extends AppCompatActivity {
 
             }
         });
-
-
+//kothai errorr?
 
     }
     private boolean hasPermissions(){

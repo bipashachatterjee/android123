@@ -9,7 +9,7 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="0dp"
-    tools:context=".bloodHome"
+    tools:context=".BloodHome"
     android:background="@drawable/organreqback"
     android:layout_margin="15sp">
 
@@ -57,11 +57,12 @@
         android:layout_below="@+id/imageView"
         android:layout_alignStart="@+id/imageView"
         android:layout_alignLeft="@+id/imageView"
-        android:layout_marginStart="-18dp"
-        android:layout_marginLeft="-18dp"
-        android:layout_marginTop="-3dp"
+        android:layout_marginStart="-5dp"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginTop="9dp"
+        android:gravity="center"
         android:fontFamily="@font/topsecret"
-        android:text="New Donor"
+        android:text="New \n Donor"
         android:textSize="20dp" />
 
     <TextView
@@ -70,10 +71,11 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/imageView2"
         android:layout_alignBottom="@+id/textView14"
-        android:layout_marginEnd="-27dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="center"
+        android:layout_marginBottom="-2dp"
         android:fontFamily="@font/topsecret"
-        android:text="Donor Search"
+        android:text="Donor \n Search"
         android:textSize="20dp" />
 
 

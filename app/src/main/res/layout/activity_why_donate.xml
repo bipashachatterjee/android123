@@ -24,12 +24,13 @@
           android:layout_height="wrap_content"
           android:text="WHY WE DONATE"
           android:textSize="30dp"
-          android:textStyle="bold"
+          android:textStyle="bold|italic"
           android:gravity="center" />
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="#0E1330"
+          android:gravity="center"
           android:text="WHY SHOULD I DONATE BLOOD?
 
 Donating blood regularly has proved beneficial not only for the recipient but also the donor. It is helpful for the vital organs, and it reduces risk for chronic diseases such as cancer and stroke.
@@ -129,6 +130,8 @@ If you are otherwise healthy, many of your organs could still be viable for an o
         android:text="SHARE"
         android:backgroundTint="#253175"
         android:textSize="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
         />
 
     <Button
@@ -138,6 +141,8 @@ If you are otherwise healthy, many of your organs could still be viable for an o
         android:layout_weight="1"
         android:text="BACK"
         android:backgroundTint="#253175"
-        android:textSize="20dp"/>
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"/>
   </LinearLayout>
 </LinearLayout>

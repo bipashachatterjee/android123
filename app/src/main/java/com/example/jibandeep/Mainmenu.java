@@ -5,43 +5,43 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 
-public class mainmenu extends AppCompatActivity {
-Button b,o,c,w;
+public class Mainmenu extends AppCompatActivity {
+ImageView b,o,c,w;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainmenu);
-        b=findViewById(R.id.button1);
-        o=findViewById(R.id.button2);
-        c=findViewById(R.id.button3);
-        w=findViewById(R.id.button4);
+        b=(ImageView)findViewById(R.id.imageView8);
+       o=(ImageView)findViewById(R.id.imageView10);
+        c=(ImageView)findViewById(R.id.imageView9);
+        w=(ImageView)findViewById(R.id.imageView11);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(mainmenu.this,bloodHome.class);
+                Intent i=new Intent(Mainmenu.this, BloodHome.class);
                 startActivity(i);
             }
         });
         o.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(mainmenu.this,organHome.class);
+                Intent i=new Intent(Mainmenu.this, OrganHome.class);
                 startActivity(i);
             }
         });
         c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(mainmenu.this,centralHome.class);
+                Intent i=new Intent(Mainmenu.this, CentralHome.class);
                 startActivity(i);
             }
         });
         w.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(mainmenu.this, WhyDonate.class);
+                Intent i=new Intent(Mainmenu.this, WhyDonate.class);
                 startActivity(i);
             }
         });

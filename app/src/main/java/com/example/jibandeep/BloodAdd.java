@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.IgnoreExtraProperties;
 
 public class BloodAdd extends AppCompatActivity {
     private DatabaseReference mFirebaseDatabase;
@@ -28,11 +29,13 @@ public class BloodAdd extends AppCompatActivity {
         mFirebaseDatabase = mFirebaseInstance.getReference();
         b = (Button) findViewById(R.id.Button);
         final EditText name = (EditText) findViewById(R.id.name);
-        final EditText mobile = (EditText) findViewById(R.id.phone);
+        final EditText mobile = (EditText) findViewById(R.id.number);
         final EditText address = (EditText) findViewById(R.id.address);
+        final EditText hospital = (EditText) findViewById(R.id.hospital);
         final Spinner blood = (Spinner) findViewById(R.id.spinner);
         c = findViewById(R.id.checkBox);
         //mobile.getText().toString();
+
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,13 +44,20 @@ public class BloodAdd extends AppCompatActivity {
                 String mobile1 = mobile.getText().toString();
                 String blood1 = blood.getSelectedItem().toString();
                 String address1 = address.getText().toString();
-                String combo = name1 + "," + mobile1 + "," + blood1 + "," + address1;
-                if (name.length() == 0) {
+                String hospital1 = hospital.getText().toString();
+                String combo = name1 + "," + mobile1 + "," + blood1 + "," + address1+","+hospital1;
+
+                if (name1.length() == 0) {
                     name.setError("Please Enter Your Name");
                     name.requestFocus();
                     return;
                 }
-                if (mobile1.length() == 0||mobile1.matches("^[0-9]{10}$")){
+                if (hospital1.length() == 0) {
+                    hospital.setError("Please Enter Your Name");
+                    hospital.requestFocus();
+                    return;
+                }
+                if (mobile1.length() == 0){
                     mobile.setError("Please Enter Your Correct Number");
                     mobile.requestFocus();
                     return;
@@ -59,15 +69,27 @@ public class BloodAdd extends AppCompatActivity {
                     return;
                 }
                 else {
-                    mFirebaseDatabase.child("users").child(blood1).child(mobile1).setValue(combo);
+                    @IgnoreExtraProperties
+                     class User {
+                        public String blood1;
+                        public String mobile1;
+                        public User(){
+                        }
+                        public User(String blood,String mobile){
+                            this.blood1=blood;
+                            this.mobile1=mobile;
+                        }
+                    }
+                   mFirebaseDatabase.child("users").child(blood1).child(mobile1).setValue(combo);
 
                     Toast.makeText(BloodAdd.this,"Donor Added",Toast.LENGTH_SHORT).show();
-                    Intent i=new Intent(BloodAdd.this,mainmenu.class);
+                    Intent i=new Intent(BloodAdd.this, Mainmenu.class);
                     startActivity(i);
                     finish();
                 }
             }
         });
+
         c.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -80,3 +102,4 @@ public class BloodAdd extends AppCompatActivity {
 
     }
 }
+

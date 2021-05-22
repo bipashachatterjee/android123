@@ -3,7 +3,7 @@
     package="com.example.jibandeep">
 
     <uses-permission android:name="LOCATION_HARDWARE" />
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,19 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Jibandeep">
 
-        <activity android:name=".organAdd" ></activity>
-        <activity android:name=".organSearch" />
+        <activity android:name=".OrganAdd" />
+        <activity android:name=".OrganSearch" />
         <activity android:name=".MainActivity" />
         <activity android:name=".WhyDonate" />
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".organSearchView" />
-        <activity android:name=".bloodSearchView" />
-        <activity android:name=".bloodSearch" />
+        <activity android:name=".OrganSearchView" />
+        <activity android:name=".BloodSearchView" />
+        <activity android:name=".BloodSearch" />
         <activity android:name=".BloodAdd" />
-        <activity android:name=".centralHome" />
-        <activity android:name=".organHome" />
-        <activity android:name=".bloodHome" />
-        <activity android:name=".mainmenu" />
+        <activity android:name=".CentralHome" />
+        <activity android:name=".OrganHome" />
+        <activity android:name=".BloodHome" />
+        <activity android:name=".Mainmenu" />
         <activity
             android:name=".SplashScreen"
             android:screenOrientation="portrait"

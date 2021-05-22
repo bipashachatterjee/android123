@@ -8,12 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
 
-public class organSearch extends AppCompatActivity {
+public class BloodSearchView extends AppCompatActivity {
+    Button srch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_organ_search);
-        Button srch=(Button) findViewById(R.id.button3);
+        setContentView(R.layout.activity_blood_search_view);
+        srch=(Button) findViewById(R.id.button3);
         final Spinner blood=(Spinner) findViewById(R.id.spinner3);
         final Spinner pan=(Spinner) findViewById(R.id.spinner4);
         srch.setOnClickListener(new View.OnClickListener() {
@@ -21,7 +22,7 @@ public class organSearch extends AppCompatActivity {
             public void onClick(View v) {
                 String btype=blood.getSelectedItem().toString();
                 String panc=pan.getSelectedItem().toString();
-                Intent re=new Intent(organSearch.this,organSearchView.class);
+                Intent re=new Intent(BloodSearchView.this, BloodSearch.class);
                 re.putExtra("bt",btype);
                 re.putExtra("pa",panc);
                 startActivity(re);

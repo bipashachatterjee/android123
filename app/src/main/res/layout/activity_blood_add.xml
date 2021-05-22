@@ -22,7 +22,7 @@
         />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/name"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="NAME"
@@ -34,13 +34,14 @@
         >
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:layout_weight="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/number"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="WHATSAPP NUMBER"
@@ -53,13 +54,14 @@
         app:startIconDrawable="@drawable/ic_call">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/number"
             android:layout_width="match_parent"
             android:layout_height="67dp"
             android:layout_weight="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/address"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="ADDRESS"
@@ -70,13 +72,14 @@
         app:startIconDrawable="@drawable/ic_home">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
-    android:id="@+id/hospital"
+
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:hint="HOSPITAL"
@@ -88,6 +91,7 @@
         app:startIconDrawable="@drawable/ic_hospital_medical_signal_of_a_cross_in_a_circle">
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/hospital"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
        android:layout_weight="1" />
@@ -99,9 +103,8 @@
         android:layout_weight="1"
         android:orientation="horizontal"
         android:weightSum="4">
-
         <TextView
-            android:id="@+id/textView5"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3"
@@ -109,7 +112,8 @@
             android:textStyle="bold|italic"
             android:layout_gravity="center"
             android:textSize="20dp"
-            android:layout_marginStart="@drawable/ic_blood_drop"/>
+            />
+
 
         <Spinner
             android:id="@+id/spinner"
